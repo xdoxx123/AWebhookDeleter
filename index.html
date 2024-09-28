@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Simple Webhook Destroyer</title>
+    <link rel='stylesheet' type='text/css' href='styles.css'/>
+</head>
+
+<body>
+    <h1 class="hone">A Webhook Remover</h1>
+  <div, class="foruminput">
+    <input type="text" id="webhook", name="webhook" placeholder="Your webhook">
+  </div>
+  <button id="but", class="yes" onclick="Click">Remove it</button>
+  <script>function Click(){
+    fetch(document.getElementById("webhook").innerText, {method:'DELETE'})
+
+  };</script>
+</body>

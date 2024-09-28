@@ -1,0 +1,33 @@
+body 
+{
+
+    background-color: rgb(63, 63, 63);
+}
+
+
+.hone
+{
+    text-align: center;
+    padding-bottom: 50px;
+    color: white;
+    
+}
+
+
+
+
+.foruminput
+{
+    display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding-right: 50px;
+}
