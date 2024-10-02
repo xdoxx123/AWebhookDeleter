@@ -1,18 +1,37 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Webhook Destroyer</title>
-    <link rel='stylesheet' type='text/css' href='styles.css'/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 
 <body>
     <h1 class="hone">A Webhook Remover</h1>
-  <div, class="foruminput">
-    <input type="text" id="webhook", name="webhook" placeholder="Your webhook">
-  </div>
-  <button id="but", class="yes" onclick="Click">Remove it</button>
-  <script>function Click(){
-    fetch(document.getElementById("webhook").value, {method:'DELETE'})
+    <div class="foruminput">
+        <input type="text" id="webhook" name="webhook" placeholder="Your webhook">
+    </div>
+    <button id="but" class="yes" onclick="Click()">Remove it</button>
 
-  };</script>
+    <script>
+        function Click() {
+            const webhookUrl = document.getElementById("webhook").value;
+            fetch(webhookUrl, { method: 'DELETE' })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Webhook removed successfully!");
+                    } else {
+                        alert("Failed to remove webhook. Please check the URL.");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert("An error occurred while trying to remove the webhook.");
+                });
+        }
+    </script>
 </body>
+
+</html>
